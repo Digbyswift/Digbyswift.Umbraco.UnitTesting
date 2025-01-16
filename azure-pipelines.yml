@@ -11,7 +11,9 @@ pool:
 
 variables:
   - name: CustomParams.ProjectName
-    value: 'Digbyswift.Experian.CrossCore'
+    value: 'Digbyswift.Umbraco.UnitTesting'
+  - name: CustomParams.SonarProjectKey
+    value: 'digbyswift-oss_digbyswift-umbraco-unittesting'
   - name: CustomParams.TestProjects
     value: '**/*[Tt]ests/*.csproj'
   - name: CustomParams.PackProjects
@@ -61,7 +63,7 @@ steps:
     SonarQube: 'SonarCloud'
     organization: 'digbyswift-oss'
     scannerMode: 'dotnet'
-    projectKey: 'digbyswift-oss_digbyswift-experian-crosscore'
+    projectKey: $(CustomParams.SonarProjectKey)
     projectName: $(CustomParams.ProjectName)
     projectVersion: $(Build.BuildNumber)
 
