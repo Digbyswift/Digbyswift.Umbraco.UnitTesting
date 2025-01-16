@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>Digbyswift.Umbraco.UnitTesting</Title>
+        <PackageProjectUrl>https://github.com/digbyswift/Digbyswift.Umbraco.UnitTesting</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/digbyswift/Digbyswift.Umbraco.UnitTesting</RepositoryUrl>
+        <PackageTags>c# extensions utility</PackageTags>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+        <PackageVersion>1.0.0-beta1</PackageVersion>
+        <FileVersion>1.0.0</FileVersion>
+        <TargetFramework>net8.0</TargetFramework>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Include="../../../package-icon.png" Pack="true" PackagePath="" />
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="../../../LICENSE" Pack="true" PackagePath="" />
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="../../../README.md" Pack="true" PackagePath="" />
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="Digbyswift.Umbraco.Web" Version="13.1.0" />
+      <PackageReference Include="NSubstitute" Version="5.3.0" />
+      <PackageReference Include="NSubstitute.Analyzers.CSharp" Version="1.0.17">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Umbraco.Cms.Web.Common" Version="13.5.2" />
+    </ItemGroup>
+</Project>
